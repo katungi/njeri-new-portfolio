@@ -10,7 +10,7 @@ export default function AboutPage() {
 
       <main className="container mx-auto px-4 py-12 md:py-24">
         <div className="grid md:grid-cols-[1fr,300px] gap-12 items-start">
-          <div className="space-y-8">
+          <div className="space-y-8 lg:sticky lg:top-24">
             <BlurFade delay={0.25} inView>
               <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl">
                 Hi, I'm Njeri! 👋🏾
@@ -109,7 +109,14 @@ export default function AboutPage() {
           </div>
 
           <div className="relative">
-            <div className="sticky top-24 rounded-full overflow-hidden aspect-square">
+            <div
+              className="sticky top-24 rounded-full overflow-hidden"
+              style={{
+                width: "300px",
+                height: "500px",
+                transform: "rotate(10deg)",
+              }}
+            >
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-31%20at%2012.00.16-6weCmMKTCFQbjoWZv8821gHiyeE2dT.png"
                 alt="Profile photo"

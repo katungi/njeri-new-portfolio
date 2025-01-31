@@ -152,49 +152,6 @@ export function ServicesSection() {
             </div>
           ))}
         </div>
-
-        <AnimatePresence mode="wait">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-muted-foreground mb-16">{activeTab && services[activeTab as keyof typeof services].title}</h2>
-
-          {activeTab && (
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                {services[activeTab as keyof typeof services].items.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="group cursor-pointer"
-                    onClick={() => activeTab === "events" && setSelectedEvent(item)}
-                  >
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-                      <Image
-                        src={item.image || "/placeholder.svg"}
-                        alt={item.title}
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                      />
-                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </div>
-                    <h4 className="mt-2 text-lg font-medium">{item.title}</h4>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        <AnimatePresence>
-          {selectedEvent && activeTab === "events" && <EventDetail event={selectedEvent} />}
-        </AnimatePresence>
       </div>
     </section>
   )
