@@ -13,7 +13,8 @@ export default function AboutPage() {
           <div className="space-y-8 lg:sticky lg:top-24">
             <BlurFade delay={0.25} inView>
               <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl">
-                Hi, I'm Njeri! 👋🏾
+                Hi, I'm Njeri!{" "}
+                <span className="inline-block animate-bounce">👋🏾</span>
               </h1>
             </BlurFade>
 
@@ -107,26 +108,22 @@ export default function AboutPage() {
               </Link>
             </div>
           </div>
-
-          <div className="relative">
-            <div
-              className="sticky top-24 rounded-full overflow-hidden"
-              style={{
-                width: "300px",
-                height: "500px",
-                transform: "rotate(10deg)",
-              }}
-            >
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-31%20at%2012.00.16-6weCmMKTCFQbjoWZv8821gHiyeE2dT.png"
-                alt="Profile photo"
-                width={500}
-                height={500}
-                className="object-cover"
-                priority
-              />
+          <BlurFade delay={0.25} inView>
+            <div className="relative group cursor-pointer">
+              <div
+                className="relative aspect-[4/5] overflow-hidden rounded-t-full bg-muted"
+              >
+                <Image
+                  src="/images/me.jpeg"
+                  alt="Profile photo"
+                  width={700}
+                  height={700}
+                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                  priority
+                />
+              </div>
             </div>
-          </div>
+          </BlurFade>
         </div>
       </main>
     </div>

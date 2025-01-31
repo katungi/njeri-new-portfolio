@@ -47,8 +47,7 @@ const events = {
     {
       title: "Open Digital Health Summit 2024",
       subtitle: "Connecting Minds, Transforming Health",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-31%20at%2012.11.54-91uJdTM7IcrOvj5JKZNzDEz8l7m3lZ.png",
+      image: "/images/events/odhs.jpeg",
       description:
         "A vibrant three-day gathering that brought together brilliant minds to tackle the challenges of digital health.",
       role: "Communications Lead, Event Manager",
@@ -70,28 +69,25 @@ const events = {
         "Google Meet",
         "Google Forms",
       ],
-      logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-31%20at%2012.19.23-T2ilbVXBXok1WtMcD2MB2Y8bf2Q7Rc.png",
+      logo: "/images/events/odhs.jpeg",
     },
     {
       title: "OpenMRS Global Implementers Conference",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-31%20at%2012.11.54-91uJdTM7IcrOvj5JKZNzDEz8l7m3lZ.png",
+      image: "/images/events/openmrs.jpeg",
     },
     {
       title: "Kenya WHO SMART Guidelines Community of Practice",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-31%20at%2012.11.54-91uJdTM7IcrOvj5JKZNzDEz8l7m3lZ.png",
+      image: "/images/events/smart.jpeg",
     },
     {
       title: "Global Digital Health Watch Party",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-31%20at%2012.11.54-91uJdTM7IcrOvj5JKZNzDEz8l7m3lZ.png",
+      image: "/images/events/gdhf.jpeg",
     },
   ],
 };
 
 export default function ProjectsPage() {
-  const [selectedEvent, setSelectedEvent] = useState<any>(null)
+  const [selectedEvent, setSelectedEvent] = useState<any>(null);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -108,31 +104,30 @@ export default function ProjectsPage() {
               {events.title}
             </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                {events.items.map((item, index) => (
-                  <div  className="group cursor-pointer"
-                    onClick={() => setSelectedEvent(item)}
-                  >
-                    <div className="relative aspect-[4/5] overflow-hidden rounded-t-full bg-muted">
-                      <Image
-                        src={item.image || "/placeholder.svg"}
-                        alt={item.title}
-                        width={400}
-                        height={500}
-                        className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </div>
-                    <h4 className="mt-2 text-lg font-medium">{item.title}</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {events.items.map((item, index) => (
+                <div
+                  className="group cursor-pointer"
+                  onClick={() => setSelectedEvent(item)}
+                >
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-t-full bg-muted">
+                    <Image
+                      src={item.image || "/placeholder.svg"}
+                      alt={item.title}
+                      width={400}
+                      height={500}
+                      className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                ))}
-              </div>
-            </AnimatePresence>
+                  <h4 className="mt-2 text-lg font-medium">{item.title}</h4>
+                </div>
+              ))}
+            </div>
+          </AnimatePresence>
 
           <AnimatePresence>
-            {selectedEvent && (
-              <EventDetail event={selectedEvent} />
-            )}
+            {selectedEvent && <EventDetail event={selectedEvent} />}
           </AnimatePresence>
         </FadeInWhenVisible>
         <FadeInWhenVisible>
