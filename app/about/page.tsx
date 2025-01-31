@@ -18,7 +18,7 @@ export default function AboutPage() {
               </h1>
             </BlurFade>
 
-            <p className="text-lg leading-relaxed">
+            <p className="text-lg leading-relaxed max-w-4xl">
               Communications expert with a passion for storytelling, a strong
               background in UI/UX design and a knack for creating impactful and
               culturally relevant campaigns. My experience in communications,
@@ -111,12 +111,12 @@ export default function AboutPage() {
           <BlurFade delay={0.25} inView>
             <div className="relative group cursor-pointer">
               <div
-                className="relative aspect-[4/5] overflow-hidden rounded-t-full bg-muted"
+                className="relative aspect-[4/5] overflow-hidden rounded-t-full bg-muted bg-green-300"
               >
                 <Image
                   src="/images/me.jpeg"
                   alt="Profile photo"
-                  width={700}
+                  width={900}
                   height={700}
                   className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
                   priority

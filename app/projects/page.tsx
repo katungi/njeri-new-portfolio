@@ -62,7 +62,7 @@ const events = {
         "media outreach",
         "storytelling",
       ],
-      tools: [
+    tools: [
         "Notion",
         "Loops",
         "Google Sheets",
@@ -139,7 +139,7 @@ export default function ProjectsPage() {
         <FadeInWhenVisible>
           <section className="space-y-12">
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl">
-              My Art
+              Ui/UX Design
             </h1>
 
             <div className="grid md:grid-cols-2 gap-8 items-center ">

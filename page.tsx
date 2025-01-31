@@ -1,50 +1,65 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { Moon, Sun } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Moon, Sun } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Page() {
-  const [isDark, setIsDark] = useState(false)
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     if (isDark) {
-      document.documentElement.classList.add("dark")
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove("dark")
+      document.documentElement.classList.remove("dark");
     }
-  }, [isDark])
+  }, [isDark]);
 
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       <header className="container mx-auto px-4 py-6">
         <nav className="flex items-center justify-between">
-          <div className="w-12" /> {/* Spacer for centering */}
+          <div className="w-12" />
           <ul className="hidden md:flex items-center gap-8 text-lg">
             <li>
-              <Link href="/" className="hover:text-primary transition-colors text-foreground">
+              <Link
+                href="/"
+                className="hover:text-primary transition-colors text-foreground"
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-primary transition-colors text-foreground">
+              <Link
+                href="/about"
+                className="hover:text-primary transition-colors text-foreground"
+              >
                 About Me
               </Link>
             </li>
             <li>
-              <Link href="/blog" className="hover:text-primary transition-colors text-foreground">
+              <Link
+                href="/blog"
+                className="hover:text-primary transition-colors text-foreground"
+              >
                 Blog
               </Link>
             </li>
             <li>
-              <Link href="/projects" className="hover:text-primary transition-colors text-foreground">
+              <Link
+                href="/projects"
+                className="hover:text-primary transition-colors text-foreground"
+              >
                 My Projects
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-primary transition-colors text-foreground">
+              <Link
+                href="/contact"
+                className="hover:text-primary transition-colors text-foreground"
+              >
                 Contact Me
               </Link>
             </li>
@@ -55,7 +70,11 @@ export default function Page() {
             onClick={() => setIsDark(!isDark)}
             className="rounded-full text-foreground"
           >
-            {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            {isDark ? (
+              <Sun className="h-5 w-5" />
+            ) : (
+              <Moon className="h-5 w-5" />
+            )}
           </Button>
         </nav>
       </header>
@@ -73,7 +92,7 @@ export default function Page() {
             />
           </div>
 
-          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 mt-8 md:mt-0">
             <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-tight">
               Helping Brands Be Seen Through Real, Beautiful Storytelling
             </h1>
@@ -82,13 +101,12 @@ export default function Page() {
               Communications and PR Specialist based in Nairobi, Kenya
             </p>
 
-            <Button size="lg" className="rounded-full text-lg px-8">
+            <Button size="lg" className="rounded-full text-lg px-8 py-5">
               About Me
             </Button>
           </div>
         </div>
       </main>
     </div>
-  )
+  );
 }
-
