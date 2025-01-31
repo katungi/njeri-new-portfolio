@@ -8,7 +8,8 @@ import { EventDetail } from "./event-detail"
 const services = {
   events: {
     title: "Events",
-    height: "h-[400px]",
+    height: "h-[600px]",
+    image: "/images/skills/events.jpg",
     items: [
       {
         title: "Open Digital Health Summit 2024",
@@ -50,7 +51,8 @@ const services = {
   },
   email: {
     title: "Email Marketing",
-    height: "h-[450px]",
+    height: "h-[550px]",
+    image: "/images/skills/email.jpg",
     items: [
       {
         title: "Campaign Strategy Development",
@@ -73,6 +75,7 @@ const services = {
   uiux: {
     title: "UI/UX Design",
     height: "h-[500px]",
+    image: "/images/skills/ui.jpg",
     items: [
       {
         title: "User Research",
@@ -94,7 +97,8 @@ const services = {
   },
   social: {
     title: "Social Media",
-    height: "h-[550px]",
+    height: "h-[650px]",
+    image: "/images/skills/socials.jpg",
     items: [
       {
         title: "Content Strategy",
@@ -123,7 +127,7 @@ export function ServicesSection() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center py-24">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-muted-foreground mb-16">Skills</h2>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-black mb-16">Skills</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {Object.entries(services).map(([key, service]) => (
@@ -140,7 +144,7 @@ export function ServicesSection() {
               >
                 <div className={`relative w-full overflow-hidden rounded-lg ${service.height}`}>
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-31%20at%2012.16.33-l3kdsSnlznGtCVj3Zi0az8Aku8mH77.png"
+                    src={service.image}
                     alt={service.title}
                     className="object-cover"
                     fill
