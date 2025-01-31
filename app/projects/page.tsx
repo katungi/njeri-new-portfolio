@@ -120,7 +120,12 @@ export default function ProjectsPage() {
                     />
                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                  <h4 className="mt-2 text-lg font-medium">{item.title}</h4>
+                  <div className="mt-4 flex items-start gap-2">
+                    <div className="w-8 h-8">
+                      <CurvedArrow />
+                    </div>
+                    <h4 className="mt-2 text-lg font-medium">{item.title}</h4>
+                  </div>
                 </div>
               ))}
             </div>
@@ -138,11 +143,11 @@ export default function ProjectsPage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               {/* Featured Projects */}
-              <Link href="#" className="group">
+              <Link href="https://www.figma.com/proto/vcOekZoKSYAn3mOrZSAsv7/Bud-App?node-id=1-2&p=f&t=K8002NiYDrdl3NbH-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2" className="group">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-t-full bg-muted">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-31%20at%2012.04.45-SXxZLWnYQJCRu6UudyRwfot3LfbaWQ.png"
-                    alt="Tost branding"
+                    src="/images/buds.png"
+                    alt="Buds app"
                     width={400}
                     height={500}
                     className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
@@ -150,9 +155,11 @@ export default function ProjectsPage() {
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <div className="mt-4 flex items-start gap-2">
-                  <CurvedArrow />
+                  <div className="w-12 h-12">
+                    <CurvedArrow />
+                  </div>
                   <p className="text-lg">
-                    Branding for Tost, a popular brunch spot in LA
+                    Buds app - an app for taking care of your plants 
                   </p>
                 </div>
               </Link>
@@ -169,7 +176,9 @@ export default function ProjectsPage() {
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <div className="mt-4 flex items-start gap-2">
-                  <CurvedArrow />
+                  <div className="w-12 h-12">
+                    <CurvedArrow />
+                  </div>
                   <p className="text-lg">
                     Poster for La SSo, a bar in downtown NYC
                   </p>
@@ -188,7 +197,9 @@ export default function ProjectsPage() {
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <div className="mt-4 flex items-start gap-2">
-                  <CurvedArrow />
+                  <div className="w-12 h-12">
+                    <CurvedArrow />
+                  </div>
                   <p className="text-lg">Poster for Des Lunes Film Society</p>
                 </div>
               </Link>
@@ -221,7 +232,9 @@ export default function ProjectsPage() {
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <div className="mt-4 flex items-start gap-2">
-                  <CurvedArrow />
+                  <div className="w-12 h-12">
+                    <CurvedArrow />
+                  </div>
                   <p className="text-lg">Designs</p>
                 </div>
               </Link>
@@ -238,7 +251,9 @@ export default function ProjectsPage() {
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <div className="mt-4 flex items-start gap-2">
-                  <CurvedArrow />
+                  <div className="w-12 h-12">
+                    <CurvedArrow />
+                  </div>
                   <p className="text-lg">Publications</p>
                 </div>
               </Link>
@@ -255,7 +270,9 @@ export default function ProjectsPage() {
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <div className="mt-4 flex items-start gap-2">
-                  <CurvedArrow />
+                  <div className="w-12 h-12">
+                    <CurvedArrow />
+                  </div>
                   <p className="text-lg">Blog</p>
                 </div>
               </Link>
