@@ -12,6 +12,7 @@ import {
 import Header from "../components/header";
 import { CurvedArrow } from "../components/curved-arrow";
 import { EventDetail } from "../components/event-detail";
+import { FlickeringGrid } from "@/components/ui/flickering-grid";
 
 function FadeInWhenVisible({ children }: { children: React.ReactNode }) {
   const controls = useAnimation();
@@ -141,68 +142,48 @@ export default function ProjectsPage() {
               My Art
             </h1>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Featured Projects */}
-              <Link href="https://www.figma.com/proto/vcOekZoKSYAn3mOrZSAsv7/Bud-App?node-id=1-2&p=f&t=K8002NiYDrdl3NbH-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2" className="group">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-t-full bg-muted">
+            <div className="grid md:grid-cols-2 gap-8 items-center ">
+              <Link
+                href="https://www.figma.com/proto/vcOekZoKSYAn3mOrZSAsv7/Bud-App?node-id=1-2&p=f&t=K8002NiYDrdl3NbH-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2"
+                className="group"
+              >
+                <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-muted w-[800px] h-[500px]">
                   <Image
-                    src="/images/buds.png"
-                    alt="Buds app"
-                    width={400}
+                    src="/images/buds-2.jpeg"
+                    alt="Bud"
+                    width={600}
                     height={500}
-                    className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                    className="object-fit w-full h-full transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
+
                 <div className="mt-4 flex items-start gap-2">
                   <div className="w-12 h-12">
                     <CurvedArrow />
                   </div>
-                  <p className="text-lg">
-                    Buds app - an app for taking care of your plants 
-                  </p>
+                  <p className="text-lg">Bud - Plant Care App. </p>
                 </div>
               </Link>
 
-              <Link href="#" className="group">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-t-full bg-muted">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-31%20at%2012.04.45-SXxZLWnYQJCRu6UudyRwfot3LfbaWQ.png"
-                    alt="La SSo poster"
-                    width={400}
-                    height={500}
-                    className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-                <div className="mt-4 flex items-start gap-2">
-                  <div className="w-12 h-12">
-                    <CurvedArrow />
-                  </div>
-                  <p className="text-lg">
-                    Poster for La SSo, a bar in downtown NYC
-                  </p>
-                </div>
-              </Link>
-
-              <Link href="#" className="group">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-t-full bg-muted">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-31%20at%2012.04.45-SXxZLWnYQJCRu6UudyRwfot3LfbaWQ.png"
-                    alt="Des Lunes Film Society poster"
-                    width={400}
-                    height={500}
-                    className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-                <div className="mt-4 flex items-start gap-2">
-                  <div className="w-12 h-12">
-                    <CurvedArrow />
-                  </div>
-                  <p className="text-lg">Poster for Des Lunes Film Society</p>
-                </div>
-              </Link>
+              <div className="space-y-4 ml-12">
+                <h2 className="text-3xl font-bold font-serif">
+                  Bud - Plant Care App 🌱
+                </h2>
+                <p className="text-lg text-black dark:text-white font-serif">
+                  🍃 Nurture your green companions stress-free
+                </p>
+                <p className="text-lg text-black dark:text-white mt-2">
+                  Being a plant parent can be challenging, especially for those
+                  new to plant care. Many find it challenging to understand and
+                  meet the specific needs of their plants. The lack of clear
+                  guidance on watering, fertilizing, and other care requirements
+                  often leads to neglect or over-caring, causing stress for both
+                  the plant and the parent. This gap highlights the need for a
+                  tool that simplifies plant care and empowers users to
+                  confidently grow healthy plants.
+                </p>
+              </div>
             </div>
           </section>
         </FadeInWhenVisible>
@@ -221,37 +202,28 @@ export default function ProjectsPage() {
             <div className="grid md:grid-cols-3 gap-8">
               {/* Additional Work Categories */}
               <Link href="#" className="group">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-t-full bg-muted">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-31%20at%2012.04.45-SXxZLWnYQJCRu6UudyRwfot3LfbaWQ.png"
-                    alt="Designs"
-                    width={400}
-                    height={500}
-                    className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                  />
+                <div className="relative aspect-[4/5] overflow-hidden rounded-t-full bg-[#f6fce4] flex items-center justify-center">
+                  <span className="text-5xl font-bold text-[#6e7a55]">
+                    Designs
+                  </span>
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <div className="mt-4 flex items-start gap-2">
-                  <div className="w-12 h-12">
+                  <div className="w-6 h-6">
                     <CurvedArrow />
                   </div>
                   <p className="text-lg">Designs</p>
                 </div>
               </Link>
-
-              <Link href="#" className="group">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-t-full bg-muted">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-31%20at%2012.04.45-SXxZLWnYQJCRu6UudyRwfot3LfbaWQ.png"
-                    alt="Publications"
-                    width={400}
-                    height={500}
-                    className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                  />
+              <Link href="https://drive.google.com/file/d/1-g7QhbqwyHGdxaAhfc7KGl7usaFaUjiT/view" className="group">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-t-full bg-[#c1d3ad] flex items-center justify-center">
+                  <span className="text-5xl font-bold text-[#6e7a55]">
+                    Publications
+                  </span>
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <div className="mt-4 flex items-start gap-2">
-                  <div className="w-12 h-12">
+                  <div className="w-6 h-6">
                     <CurvedArrow />
                   </div>
                   <p className="text-lg">Publications</p>
@@ -259,13 +231,13 @@ export default function ProjectsPage() {
               </Link>
 
               <Link href="#" className="group">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-t-full bg-muted">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-t-full bg-[#b09281]">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-31%20at%2012.04.45-SXxZLWnYQJCRu6UudyRwfot3LfbaWQ.png"
+                    src="https://silkandsouffle213538661.wordpress.com/wp-content/uploads/2020/07/cropped-light_pink_floral_logo-removebg-preview1.png"
                     alt="Blog"
                     width={400}
                     height={500}
-                    className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                    className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>

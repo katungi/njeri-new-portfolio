@@ -7,6 +7,7 @@ module.exports = {
       fontFamily: {
         serif: ["var(--font-serif)", "serif"],
         sans: ["var(--font-sans)", "sans-serif"],
+        
       },
       colors: {
         border: "hsl(var(--border))",

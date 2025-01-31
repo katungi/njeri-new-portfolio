@@ -12,21 +12,19 @@ import { Particles } from "@/components/ui/particles";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 
-
 export default function Page() {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 0.5], [0, -50]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.5]);
 
   const { resolvedTheme } = useTheme();
-  const theme = useTheme()
+  const theme = useTheme();
 
   const [color, setColor] = useState("#ffffff");
- 
+
   useEffect(() => {
-    console.log("Resolved Theme:",resolvedTheme);
-     setColor(resolvedTheme === "dark" ? "#ffffff" : "#000000");
-  
+    console.log("Resolved Theme:", resolvedTheme);
+    setColor(resolvedTheme === "dark" ? "#ffffff" : "#000000");
   }, [resolvedTheme]);
 
   return (
@@ -41,15 +39,15 @@ export default function Page() {
       />
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center">
+      <section className=" flex items-center">
         <div className="container mx-auto px-4 py-12 md:py-24">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
-            <div className="w-48 md:w-64 shrink-0">
+            <div className="w-[800px] md:w-[500px] shrink-0">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-31%20at%2011.53.15-rjVIFKEfWKAcH4uSQK45TRj3vTR5NS.png"
+                src="/images/kamtu.png"
                 alt="Mascot character with laptop"
-                width={400}
-                height={400}
+                width={900}
+                height={900}
                 priority
                 className="w-full h-auto"
               />
@@ -72,10 +70,11 @@ export default function Page() {
                   About Me
                 </Button>
               </Link>
+              <ScrollIndicator />
             </div>
           </div>
+
         </div>
-        <ScrollIndicator />
       </section>
       <ServicesSection />
       <ToolsSection />

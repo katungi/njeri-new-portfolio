@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react"
 export function ScrollIndicator() {
   return (
     <motion.div
-      className="absolute bottom-8 left-1/2 -translate-x-1/2"
+      className="bottom-8 ml-24 -translate-x-1/2 mt-32"
       animate={{
         y: [0, 10, 0],
       }}
