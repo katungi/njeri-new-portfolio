@@ -8,15 +8,37 @@ import { ServicesSection } from "./components/services-section";
 import { ToolsSection } from "./components/tools-section";
 import { ScrollIndicator } from "./components/scroll-indicator";
 import { BlurFade } from "@/components/ui/blur-fade";
+import { Particles } from "@/components/ui/particles";
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
+
 
 export default function Page() {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 0.5], [0, -50]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.5]);
 
+  const { resolvedTheme } = useTheme();
+  const theme = useTheme()
+
+  const [color, setColor] = useState("#ffffff");
+ 
+  useEffect(() => {
+    console.log("Resolved Theme:",resolvedTheme);
+     setColor(resolvedTheme === "dark" ? "#ffffff" : "#000000");
+  
+  }, [resolvedTheme]);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
+      <Particles
+        className="absolute inset-0 z-0"
+        quantity={100}
+        ease={80}
+        color={color}
+        refresh
+      />
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center">

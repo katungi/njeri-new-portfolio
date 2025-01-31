@@ -42,7 +42,7 @@ export function EventDetail({ event }: EventDetailProps) {
           </div>
           <div>
             <h3 className="font-bold mb-2">Methods:</h3>
-            <p>{event.methods.join(", ")}</p>
+            <p>{event?.methods?.join(", ")}</p>
           </div>
         </div>
         <div className="space-y-4">
@@ -56,7 +56,7 @@ export function EventDetail({ event }: EventDetailProps) {
           </div>
           <div>
             <h3 className="font-bold mb-2">Tools:</h3>
-            <p>{event.tools.join(", ")}</p>
+            <p>{event?.tools?.join(", ")}</p>
           </div>
         </div>
       </div>
